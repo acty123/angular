@@ -1,0 +1,8 @@
+<p>
+  tmdb-movies works!
+</p>
+<ol>
+  <li *ngFor="let movie of movies">
+    <a [routerLink]="['/credits',movie.id]">{{ movie.title}}</a>
+  </li>
+</ol>
