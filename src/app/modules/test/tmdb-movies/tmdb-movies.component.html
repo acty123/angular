@@ -1,8 +1,41 @@
 <p>
   tmdb-movies works!
 </p>
-<ol>
-  <li *ngFor="let movie of movies">
-    <a [routerLink]="['/credits',movie.id]">{{ movie.title}}</a>
-  </li>
-</ol>
+<!--ol>
+    <li *ngFor="let movie of movies">
+      <a [routerLink]="['/credits',movie.id]">{{ movie.title}}</a>
+    </li>
+  </ol-->
+
+<div class="app-list">
+  <table mat-table class="mat-elevation-z8">
+    <thead>
+      <tr>
+        <th>Movie</th>
+        <th>Genre</th>
+        <th>Release date</th>
+        <th>Stats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <div *ngFor="let movie of movies">
+        <tr>
+            <td>
+              <b>{{ movie.title}}</b>
+              <br>
+              {{ movie.overview}}
+            </td>
+            <td>
+              ---
+            </td>
+            <td>
+              {{ movie.release_date}}
+            </td>
+            <td>
+              ---
+            </td>
+        </tr>
+      </div>
+    </tbody>
+  </table>
+</div>

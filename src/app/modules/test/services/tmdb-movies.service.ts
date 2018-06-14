@@ -17,7 +17,11 @@ export class TmdbMoviesService {
             return response.json().results.map((item)=>{
               return {
                 id: item.id,
-                title: item.title
+                title: item.title,
+                image:item.poster_path,
+                overview:item.overview,
+                genre:item.genre_ids,
+                release_date:item.release_date
               }
             });
           }
